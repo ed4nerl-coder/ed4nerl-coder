@@ -121,10 +121,10 @@ nav {
 }
 
 .photo-accueil {
-  width: 400px;          /* taille large */
-  max-width: 100%;       /* responsive */
-  border-radius: 12px;   /* coins arrondis */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* ombre légère */
+  width: 400px;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
   object-fit: cover;
 }
 
