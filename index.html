@@ -57,7 +57,59 @@
     footer {
       font-size: 0.9em;
     }
-  </style>
+  </style>nav {
+  background-color: #000;
+  padding: 0;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu > li > a {
+  display: block;
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.menu > li:hover {
+  background-color: #222;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  background-color: #111;
+  min-width: 220px;
+  z-index: 1000;
+  border-radius: 4px;
+}
+
+.submenu li a {
+  display: block;
+  padding: 12px 16px;
+  color: white;
+  text-decoration: none;
+}
+
+.submenu li a:hover {
+  background-color: #333;
+}
+
+.dropdown:hover .submenu {
+  display: block;
+}
 </head>
 <body>
 
@@ -67,10 +119,23 @@
   </header>
 
   <nav>
-    <a href="index.html">Accueil</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+  <ul class="menu">
+    <li><a href="index.html">Accueil</a></li>
+    <li class="dropdown">
+      <a href="portfolio.html">Portfolio ▾</a>
+      <ul class="submenu">
+        <li><a href="videos-interviews.html">🎥 Vidéos Interviews</a></li>
+        <li><a href="videos-commerciales.html">🎥 Vidéos Commerciales</a></li>
+        <li><a href="videos-evenementielles.html">🎥 Vidéos Événementielles</a></li>
+        <li><a href="videos-particuliers.html">🎥 Vidéos Particuliers</a></li>
+        <li><a href="photos-portraits.html">📸 Photos Portraits</a></li>
+        <li><a href="photos-evenementielles.html">📸 Photos Événementielles</a></li>
+        <li><a href="photos-commerciales.html">📸 Photos Commerciales</a></li>
+      </ul>
+    </li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
 
   <section class="intro">
   <img src="photo-accueil.png" alt="Photo de moi">
