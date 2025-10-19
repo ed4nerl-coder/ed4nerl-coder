@@ -370,3 +370,21 @@ footer {
   }
 }
 
+.video-title {
+  text-align: center;
+  margin: 60px auto 40px;
+  font-size: 32px;
+  font-family: 'Playfair Display', serif;
+  color: #333;
+  font-weight: 500;
+}
+
+.photo-title {
+  text-align: center;
+  margin: 60px auto 40px;
+  font-size: 32px;
+  font-family: 'Playfair Display', serif;
+  color: #333;
+  font-weight: 500;
+}
+
