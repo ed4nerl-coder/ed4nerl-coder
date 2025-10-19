@@ -26,7 +26,7 @@ h1, h2 {
   background-color: #ffffff;
   border-bottom: 1px solid #eaeaea;
   position: relative;
-  height: 120px; /* ✅ plus grand */
+  height: 180px; /* ✅ plus grand */
 }
 
 .logo-centre {
