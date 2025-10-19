@@ -1,82 +1,124 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Studio Créatif - Vidéo, Montage, Photo</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kayako Studio - Vidéo, Montage, Photo</title>
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+
     body {
       font-family: 'Segoe UI', sans-serif;
-      line-height: 1.6;
-      background: #f5f5f5;
-      color: #333;
+      background: #f4f4f4;
+      color: #222;
     }
+
     header {
       background: #000;
       color: #fff;
-      padding: 40px 20px;
+      padding: 60px 20px;
       text-align: center;
     }
+
     header h1 {
-      font-size: 2.5em;
+      font-size: 3em;
       margin-bottom: 10px;
     }
+
     header p {
-      font-size: 1.2em;
+      font-size: 1.3em;
+      color: #ccc;
     }
+
     nav {
-      background: #222;
+      background: #111;
       text-align: center;
     }
+
     nav a {
       color: #fff;
-      display: inline-block;
       padding: 15px 20px;
+      display: inline-block;
       text-decoration: none;
     }
+
     nav a:hover {
-      background: #444;
+      background: #333;
     }
+
     section {
       padding: 60px 20px;
       max-width: 1000px;
       margin: auto;
     }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2em;
+      color: #000;
+    }
+
     .services, .portfolio {
       display: flex;
       flex-wrap: wrap;
       gap: 30px;
       justify-content: center;
     }
+
     .card {
-      background: white;
+      background: #fff;
       border-radius: 8px;
       padding: 20px;
       width: 300px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
       text-align: center;
     }
+
     .card img {
-      max-width: 100%;
+      width: 100%;
       border-radius: 6px;
       margin-bottom: 15px;
     }
+
     .contact {
       background: #eee;
-      padding: 40px 20px;
       text-align: center;
+      padding: 40px 20px;
     }
+
+    .contact a {
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: bold;
+      color: #000;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    .social-icons {
+      margin-top: 20px;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      font-size: 1.5em;
+      color: #000;
+      text-decoration: none;
+    }
+
     footer {
-      background: #222;
+      background: #111;
       color: #aaa;
       text-align: center;
       padding: 20px;
-      font-size: 0.9em;
     }
 
     @media (max-width: 768px) {
@@ -90,8 +132,8 @@
 <body>
 
   <header>
-    <h1>Studio Créatif</h1>
-    <p>Production Vidéo • Montage • Photographie</p>
+    <h1>Kayako Studio</h1>
+    <p>Production vidéo, montage & photographie créative</p>
   </header>
 
   <nav>
@@ -101,53 +143,56 @@
   </nav>
 
   <section id="services">
-    <h2>Nos Services</h2>
+    <h2>Services</h2>
     <div class="services">
       <div class="card">
-        <img src="https://via.placeholder.com/300x180?text=Production+Vidéo" alt="Vidéo">
+        <img src="https://via.placeholder.com/300x180?text=Vidéo" alt="Vidéo" />
         <h3>Production Vidéo</h3>
-        <p>Captation, scénarisation, tournage professionnel pour tous vos projets (événements, clips, pub, etc).</p>
+        <p>Clips musicaux, publicités, tournages artistiques — captation professionnelle sur mesure.</p>
       </div>
       <div class="card">
-        <img src="https://via.placeholder.com/300x180?text=Montage" alt="Montage">
+        <img src="https://via.placeholder.com/300x180?text=Montage" alt="Montage" />
         <h3>Montage Vidéo</h3>
-        <p>Montage professionnel avec effets, transitions, musique et habillage sur mesure.</p>
+        <p>Montage stylisé, storytelling dynamique, effets visuels, color grading et plus.</p>
       </div>
       <div class="card">
-        <img src="https://via.placeholder.com/300x180?text=Photographie" alt="Photo">
+        <img src="https://via.placeholder.com/300x180?text=Photo" alt="Photo" />
         <h3>Photographie</h3>
-        <p>Shooting photo pour événements, portraits, produits, entreprises et réseaux sociaux.</p>
+        <p>Portraits, événements, shootings produits — images créatives et percutantes.</p>
       </div>
     </div>
   </section>
 
   <section id="portfolio">
-    <h2>Nos Réalisations</h2>
+    <h2>Réalisations</h2>
     <div class="portfolio">
       <div class="card">
         <img src="https://via.placeholder.com/300x180?text=Projet+1" alt="Projet 1">
-        <p>Clip musical – Artiste indépendant (2023)</p>
+        <p>Clip musical – Artiste indépendant</p>
       </div>
       <div class="card">
         <img src="https://via.placeholder.com/300x180?text=Projet+2" alt="Projet 2">
-        <p>Film d’entreprise – Start-up tech (2024)</p>
+        <p>Film de présentation – Marque locale</p>
       </div>
       <div class="card">
         <img src="https://via.placeholder.com/300x180?text=Projet+3" alt="Projet 3">
-        <p>Shooting photo – Mariage (2024)</p>
+        <p>Shooting photo – Portrait corporate</p>
       </div>
     </div>
   </section>
 
   <section id="contact" class="contact">
     <h2>Contact</h2>
-    <p>Tu as un projet ? Envoie-nous un message !</p>
-    <p>Email : <strong>contact@tonsite.com</strong></p>
-    <p>Instagram : <strong>@studio_creatif</strong></p>
+    <p>📩 Pour toute demande de projet ou collaboration :</p>
+    <a href="mailto:kayakostudio@gmail.com">kayakostudio@gmail.com</a>
+
+    <div class="social-icons">
+      <a href="https://www.instagram.com/kayakostudio/" target="_blank" title="Instagram">📸 Instagram</a>
+    </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Studio Créatif – Tous droits réservés.</p>
+    <p>&copy; 2025 Kayako Studio. Tous droits réservés.</p>
   </footer>
 
 </body>
