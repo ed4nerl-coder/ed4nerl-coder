@@ -3,129 +3,59 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kayako Studio - Vidéo, Montage, Photo</title>
+  <title>Kayako Studio - Accueil</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f4f4f4;
+      font-family: sans-serif;
+      margin: 0;
+      background: #f5f5f5;
       color: #222;
     }
 
-    header {
+    header, nav, footer {
       background: #000;
-      color: #fff;
-      padding: 60px 20px;
+      color: white;
       text-align: center;
-    }
-
-    header h1 {
-      font-size: 3em;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 1.3em;
-      color: #ccc;
-    }
-
-    nav {
-      background: #111;
-      text-align: center;
+      padding: 20px;
     }
 
     nav a {
-      color: #fff;
-      padding: 15px 20px;
-      display: inline-block;
+      color: white;
+      margin: 0 15px;
       text-decoration: none;
+      font-weight: bold;
     }
 
     nav a:hover {
-      background: #333;
-    }
-
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 40px;
-      font-size: 2em;
-      color: #000;
-    }
-
-    .services, .portfolio {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      justify-content: center;
-    }
-
-    .card {
-      background: #fff;
-      border-radius: 8px;
-      padding: 20px;
-      width: 300px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-
-    .card img {
-      width: 100%;
-      border-radius: 6px;
-      margin-bottom: 15px;
-    }
-
-    .contact {
-      background: #eee;
-      text-align: center;
-      padding: 40px 20px;
-    }
-
-    .contact a {
-      display: inline-block;
-      margin-top: 10px;
-      font-weight: bold;
-      color: #000;
-      text-decoration: none;
-    }
-
-    .contact a:hover {
       text-decoration: underline;
     }
 
-    .social-icons {
-      margin-top: 20px;
+    .intro {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 60px 20px;
+      text-align: center;
     }
 
-    .social-icons a {
-      margin: 0 10px;
-      font-size: 1.5em;
-      color: #000;
-      text-decoration: none;
+    .intro img {
+      width: 200px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+    }
+
+    .intro h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .intro p {
+      max-width: 600px;
+      font-size: 1.2em;
     }
 
     footer {
-      background: #111;
-      color: #aaa;
-      text-align: center;
-      padding: 20px;
-    }
-
-    @media (max-width: 768px) {
-      .services, .portfolio {
-        flex-direction: column;
-        align-items: center;
-      }
+      font-size: 0.9em;
     }
   </style>
 </head>
@@ -133,66 +63,31 @@
 
   <header>
     <h1>Kayako Studio</h1>
-    <p>Production vidéo, montage & photographie créative</p>
+    <p>Bienvenue sur mon site</p>
   </header>
 
   <nav>
-    <a href="#services">Services</a>
-    <a href="#portfolio">Réalisations</a>
-    <a href="#contact">Contact</a>
+    <a href="index.html">Accueil</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="contact.html">Contact</a>
   </nav>
 
-  <section id="services">
-    <h2>Services</h2>
-    <div class="services">
-      <div class="card">
-        <img src="https://via.placeholder.com/300x180?text=Vidéo" alt="Vidéo" />
-        <h3>Production Vidéo</h3>
-        <p>Clips musicaux, publicités, tournages artistiques — captation professionnelle sur mesure.</p>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/300x180?text=Montage" alt="Montage" />
-        <h3>Montage Vidéo</h3>
-        <p>Montage stylisé, storytelling dynamique, effets visuels, color grading et plus.</p>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/300x180?text=Photo" alt="Photo" />
-        <h3>Photographie</h3>
-        <p>Portraits, événements, shootings produits — images créatives et percutantes.</p>
-      </div>
-    </div>
-  </section>
+  <section class="intro">
+  <img src="photo-accueil.png" alt="Photo de moi">
+  <h1>À propos de Kayakostudio</h1>
+  <p>
+    Kayakostudio est l'entreprise de production vidéo et photo fondée par Léandre Lacarbonara en Janvier 2025.
+    
+    Sa manière contemporaine d'intérpréter l'art du visuel est unique.
+    Fournir un travail efficace et satisfaisant n'est pas son seul objectif, il priorise un lien humain authentique afin de pouvoir
+    en retirer le meilleur résultat possible.
 
-  <section id="portfolio">
-    <h2>Réalisations</h2>
-    <div class="portfolio">
-      <div class="card">
-        <img src="https://via.placeholder.com/300x180?text=Projet+1" alt="Projet 1">
-        <p>Clip musical – Artiste indépendant</p>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/300x180?text=Projet+2" alt="Projet 2">
-        <p>Film de présentation – Marque locale</p>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/300x180?text=Projet+3" alt="Projet 3">
-        <p>Shooting photo – Portrait corporate</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="contact">
-    <h2>Contact</h2>
-    <p>📩 Pour toute demande de projet ou collaboration :</p>
-    <a href="mailto:kayakostudio@gmail.com">kayakostudio@gmail.com</a>
-
-    <div class="social-icons">
-      <a href="https://www.instagram.com/kayakostudio/" target="_blank" title="Instagram">📸 Instagram</a>
-    </div>
-  </section>
+    Que vous soyez une entreprise, un particulier, le fondateur d'une marque, Kayakostudio vous accompagnera dans ce processus de création.
+  </p>
+</section>
 
   <footer>
-    <p>&copy; 2025 Kayako Studio. Tous droits réservés.</p>
+    &copy; 2025 Kayako Studio – Tous droits réservés.
   </footer>
 
 </body>
