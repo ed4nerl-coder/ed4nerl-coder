@@ -112,7 +112,7 @@ h1, h2 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #000;
+  color: #fff;
   font-size: 24px;
   font-family: 'Playfair Display', serif;
   padding: 10px 20px;
