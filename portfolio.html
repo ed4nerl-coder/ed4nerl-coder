@@ -1,113 +1,55 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portfolio – Kayako Studio</title>
-  <style><link rel="stylesheet" href="style.css">
-    body {
-      font-family: 'Roboto', sans-serif;
-      margin: 0;
-      background: #fff;
-      color: #222;
-    }
-
-    header, nav, footer {
-      background: #000;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    .portfolio {
-      max-width: 1000px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-
-    .gallery img, iframe {
-      width: 300px;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-
-    footer {
-      font-size: 0.9em;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Kayako Studio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <header>
-    <h1>Mon Portfolio</h1>
+  <!-- Barre de navigation -->
+  <header class="topbar">
+    <div class="menu-gauche">
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html">Accueil</a></li>
+          <li class="dropdown">
+            <a href="portfolio.html">Portfolio ▾</a>
+            <ul class="submenu">
+              <li><a href="videos-interviews.html">🎥 Vidéos Interviews</a></li>
+              <li><a href="videos-commerciales.html">🎥 Vidéos Commerciales</a></li>
+              <li><a href="videos-evenementielles.html">🎥 Vidéos Événementielles</a></li>
+              <li><a href="videos-particuliers.html">🎥 Vidéos Particuliers</a></li>
+              <li><a href="photos-portraits.html">📸 Photos Portraits</a></li>
+              <li><a href="photos-evenementielles.html">📸 Photos Événementielles</a></li>
+              <li><a href="photos-commerciales.html">📸 Photos Commerciales</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="logo-centre">
+      <img src="logo.png" alt="Kayako Studio" class="logo">
+    </div>
   </header>
 
-  <nav>
-  <div class="menu-toggle" onclick="toggleMenu()">
-    <span></span>
-  </div>
-  <ul class="menu">
-    <li><a href="index.html">Accueil</a></li>
-    <li class="dropdown">
-      <a href="portfolio.html">Portfolio ▾</a>
-      <ul class="submenu">
-        <li><a href="videos-interviews.html">Vidéos Interviews</a></li>
-        <li><a href="videos-commerciales.html">Vidéos Commerciales</a></li>
-        <li><a href="videos-evenementielles.html">Vidéos Événementielles</a></li>
-        <li><a href="videos-particuliers.html">Vidéos Particuliers</a></li>
-        <li><a href="photos-portraits.html">Photos Portraits</a></li>
-        <li><a href="photos-evenementielles.html">Photos Événementielles</a></li>
-        <li><a href="photos-commerciales.html">Photos Commerciales</a></li>
-      </ul>
-    </li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
-
-<script>
-  function toggleMenu() {
-    const nav = document.querySelector('nav');
-    nav.classList.toggle('active');
-
-    // Gestion sous-menu mobile
-    const dropdown = nav.querySelector('.dropdown');
-    dropdown.classList.toggle('active');
-  }
-</script>
-
-  <section class="portfolio">
-    <h2>Photos</h2>
-    <div class="gallery">
-      <img src="https://via.placeholder.com/300x180.png?text=Photo+1" alt="Photo 1">
-      <img src="https://via.placeholder.com/300x180.png?text=Photo+2" alt="Photo 2">
-      <img src="https://via.placeholder.com/300x180.png?text=Photo+3" alt="Photo 3">
-    </div>
-
-    <h2 style="margin-top: 40px;">Vidéos</h2>
-    <div class="gallery">
-      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
-    </div>
+  <!-- Bannière -->
+  <section class="banniere">
+    <img src="banniere.png" alt="Bannière Portfolio">
+    <div class="banniere-texte">Mon portfolio</div>
   </section>
+
+  <!-- Contenu principal -->
+  <main class="content">
+    <h2 style="text-align: center; font-family: 'Playfair Display'; margin-bottom: 40px;">Explorez mes réalisations</h2>
+    <p style="text-align: center; max-width: 700px; margin: 0 auto;">
+      Découvrez ici une sélection de mes projets vidéos et photographiques, classés par catégories pour faciliter la navigation.
+      Utilisez le menu déroulant ci-dessus pour explorer les différentes sections.
+    </p>
+  </main>
 
   <footer>
     &copy; 2025 Kayako Studio – Tous droits réservés.
