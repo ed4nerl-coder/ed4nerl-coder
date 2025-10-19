@@ -1,66 +1,58 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Kayako Studio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kayako Studio - Accueil</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header>
-    <h1>Kayako Studio</h1>
-    <p>Bienvenue sur mon site</p>
-  </header>
-
-  <nav>
-  <div class="menu-toggle" onclick="toggleMenu()">
-    <span></span>
-  </div>
-  <ul class="menu">
-    <li><a href="index.html">Accueil</a></li>
-    <li class="dropdown">
-      <a href="portfolio.html">Portfolio ▾</a>
-      <ul class="submenu">
-        <li><a href="videos-interviews.html">🎥 Vidéos Interviews</a></li>
-        <li><a href="videos-commerciales.html">🎥 Vidéos Commerciales</a></li>
-        <li><a href="videos-evenementielles.html">🎥 Vidéos Événementielles</a></li>
-        <li><a href="videos-particuliers.html">🎥 Vidéos Particuliers</a></li>
-        <li><a href="photos-portraits.html">📸 Photos Portraits</a></li>
-        <li><a href="photos-evenementielles.html">📸 Photos Événementielles</a></li>
-        <li><a href="photos-commerciales.html">📸 Photos Commerciales</a></li>
+<header>
+  <div class="header-top">
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Accueil</a></li>
+        <li class="dropdown">
+          <a href="portfolio.html">Portfolio ▾</a>
+          <ul class="submenu">
+            <li><a href="videos-interviews.html">🎥 Vidéos Interviews</a></li>
+            <li><a href="videos-commerciales.html">🎥 Vidéos Commerciales</a></li>
+            <li><a href="videos-evenementielles.html">🎥 Vidéos Événementielles</a></li>
+            <li><a href="videos-particuliers.html">🎥 Vidéos Particuliers</a></li>
+            <li><a href="photos-portraits.html">📸 Photos Portraits</a></li>
+            <li><a href="photos-evenementielles.html">📸 Photos Événementielles</a></li>
+            <li><a href="photos-commerciales.html">📸 Photos Commerciales</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
-    </li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+    </nav>
 
-<script>
-  function toggleMenu() {
-    const nav = document.querySelector('nav');
-    nav.classList.toggle('active');
+    <div class="logo-container">
+      <img src="photo-accueil.png" alt="Logo Kayako Studio" class="logo" />
+    </div>
+  </div>
+</header>
 
-    // Gestion sous-menu mobile
-    const dropdown = nav.querySelector('.dropdown');
-    dropdown.classList.toggle('active');
-  }
-</script>
-
+<main>
   <section class="intro">
-    <img src="photo-accueil.png" alt="Photo de moi">
-    <h2>À propos de Kayako Studio</h2>
-    <p>
-      Kayako Studio est l'entreprise de production vidéo et photo fondée par Léandre Lacarbonara en janvier 2025.
-      <br><br>
-      Sa manière contemporaine d'interpréter l'art du visuel est unique.
-      Fournir un travail efficace et satisfaisant n'est pas son seul objectif : il priorise un lien humain authentique pour en retirer le meilleur résultat possible.
-      <br><br>
-      Que vous soyez une entreprise, un particulier, ou le fondateur d'une marque, Kayako Studio vous accompagne dans votre processus de création.
-    </p>
+    <img src="photo-accueil.png" alt="Photo de Léandre" class="photo-accueil" />
+    <div class="intro-text">
+      <h2>À propos de Kayako Studio</h2>
+      <p>
+        Kayako Studio est l'entreprise de production vidéo et photo fondée par Léandre Lacarbonara en janvier 2025.<br /><br />
+        Sa manière contemporaine d'interpréter l'art du visuel est unique.<br />
+        Fournir un travail efficace et satisfaisant n'est pas son seul objectif : il priorise un lien humain authentique pour en retirer le meilleur résultat possible.<br /><br />
+        Que vous soyez une entreprise, un particulier, ou le fondateur d'une marque, Kayako Studio vous accompagne dans votre processus de création.
+      </p>
+    </div>
   </section>
+</main>
 
-  <footer>
-    &copy; 2025 Kayako Studio – Tous droits réservés.
-  </footer>
+<footer>
+  &copy; 2025 Kayako Studio – Tous droits réservés.
+</footer>
 
 </body>
 </html>
