@@ -309,3 +309,64 @@ footer {
 .submenu li a:hover {
   color: #666;
 }
+
+/* SECTION PRÉSENTATION */
+.presentation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 40px;
+  gap: 60px;
+  background-color: #fff;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+
+/* Animation pour la photo */
+.photo-container {
+  flex: 1;
+  max-width: 500px;
+  animation: slideInLeft 1.2s ease forwards;
+  opacity: 0;
+}
+
+.photo-container img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation pour le texte */
+.texte-container {
+  flex: 1;
+  animation: slideInRight 1.2s ease forwards;
+  opacity: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* Animations */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
