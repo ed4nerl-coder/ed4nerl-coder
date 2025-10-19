@@ -2,17 +2,153 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Mon premier site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Studio Créatif - Vidéo, Montage, Photo</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body {
-      font-family: sans-serif;
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      background: #f5f5f5;
+      color: #333;
+    }
+    header {
+      background: #000;
+      color: #fff;
+      padding: 40px 20px;
       text-align: center;
-      margin-top: 50px;
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2em;
+    }
+    nav {
+      background: #222;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      display: inline-block;
+      padding: 15px 20px;
+      text-decoration: none;
+    }
+    nav a:hover {
+      background: #444;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .services, .portfolio {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+    .card {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      width: 300px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .card img {
+      max-width: 100%;
+      border-radius: 6px;
+      margin-bottom: 15px;
+    }
+    .contact {
+      background: #eee;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    footer {
+      background: #222;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 768px) {
+      .services, .portfolio {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Bienvenue sur mon site !</h1>
-  <p>Développé avec GitHub Pages 🚀</p>
+
+  <header>
+    <h1>Studio Créatif</h1>
+    <p>Production Vidéo • Montage • Photographie</p>
+  </header>
+
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Réalisations</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="services">
+    <h2>Nos Services</h2>
+    <div class="services">
+      <div class="card">
+        <img src="https://via.placeholder.com/300x180?text=Production+Vidéo" alt="Vidéo">
+        <h3>Production Vidéo</h3>
+        <p>Captation, scénarisation, tournage professionnel pour tous vos projets (événements, clips, pub, etc).</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x180?text=Montage" alt="Montage">
+        <h3>Montage Vidéo</h3>
+        <p>Montage professionnel avec effets, transitions, musique et habillage sur mesure.</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x180?text=Photographie" alt="Photo">
+        <h3>Photographie</h3>
+        <p>Shooting photo pour événements, portraits, produits, entreprises et réseaux sociaux.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <h2>Nos Réalisations</h2>
+    <div class="portfolio">
+      <div class="card">
+        <img src="https://via.placeholder.com/300x180?text=Projet+1" alt="Projet 1">
+        <p>Clip musical – Artiste indépendant (2023)</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x180?text=Projet+2" alt="Projet 2">
+        <p>Film d’entreprise – Start-up tech (2024)</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x180?text=Projet+3" alt="Projet 3">
+        <p>Shooting photo – Mariage (2024)</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>Tu as un projet ? Envoie-nous un message !</p>
+    <p>Email : <strong>contact@tonsite.com</strong></p>
+    <p>Instagram : <strong>@studio_creatif</strong></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Studio Créatif – Tous droits réservés.</p>
+  </footer>
+
 </body>
 </html>
