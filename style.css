@@ -102,11 +102,13 @@ nav {
 }
 
 .logo {
-  height: 70px;
+  height: 80px;          /* augmente la taille, adapte si besoin */
   width: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  border-radius: 0;      /* enlève le bord arrondi */
+  box-shadow: none;      /* enlève l’ombre */
+  object-fit: contain;   /* pour bien ajuster l’image */
 }
+
 
 /* SECTION intro (photo + texte) */
 .intro {
