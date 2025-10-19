@@ -1,63 +1,15 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact – Kayako Studio</title>
-  <style><link rel="stylesheet" href="style.css">
-    body {
-      font-family: 'Roboto', sans-serif;
-      margin: 0;
-      background: #f9f9f9;
-      color: #222;
-    }
-
-    header, nav, footer {
-      background: #000;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    .contact {
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    .contact p {
-      font-size: 1.2em;
-    }
-
-    .contact a {
-      display: inline-block;
-      margin-top: 15px;
-      font-weight: bold;
-      color: #000;
-      text-decoration: none;
-    }
-
-    .contact a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      font-size: 0.9em;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Kayako Studio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
 
+  <!-- Barre de navigation -->
   <header class="topbar">
     <div class="menu-gauche">
       <nav>
@@ -66,43 +18,41 @@
           <li class="dropdown">
             <a href="portfolio.html">Portfolio ▾</a>
             <ul class="submenu">
-              <li><a href="videos-interviews.html">Vidéos Interviews</a></li>
-              <li><a href="videos-commerciales.html">Vidéos Commerciales</a></li>
-              <li><a href="videos-evenementielles.html">Vidéos Événementielles</a></li>
-              <li><a href="videos-particuliers.html">Vidéos Particuliers</a></li>
-              <li><a href="photos-portraits.html">Photos Portraits</a></li>
-              <li><a href="photos-evenementielles.html">Photos Événementielles</a></li>
-              <li><a href="photos-commerciales.html">Photos Commerciales</a></li>
+              <li><a href="videos-interviews.html">🎥 Vidéos Interviews</a></li>
+              <li><a href="videos-commerciales.html">🎥 Vidéos Commerciales</a></li>
+              <li><a href="videos-evenementielles.html">🎥 Vidéos Événementielles</a></li>
+              <li><a href="videos-particuliers.html">🎥 Vidéos Particuliers</a></li>
+              <li><a href="photos-portraits.html">📸 Photos Portraits</a></li>
+              <li><a href="photos-evenementielles.html">📸 Photos Événementielles</a></li>
+              <li><a href="photos-commerciales.html">📸 Photos Commerciales</a></li>
             </ul>
           </li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
-
     <div class="logo-centre">
       <img src="logo.png" alt="Kayako Studio" class="logo">
     </div>
   </header>
 
-<script>
-  function toggleMenu() {
-    const nav = document.querySelector('nav');
-    nav.classList.toggle('active');
-
-    // Gestion sous-menu mobile
-    const dropdown = nav.querySelector('.dropdown');
-    dropdown.classList.toggle('active');
-  }
-</script>
-
-  <section class="contact">
-    <p>📧 Tu veux travailler avec moi ou poser une question ?</p>
-    <a href="mailto:kayakostudio@gmail.com">kayakostudio@gmail.com</a>
-
-    <p style="margin-top: 30px;">📸 Suis-moi sur Instagram :</p>
-    <a href="https://www.instagram.com/kayakostudio/" target="_blank">@kayakostudio</a>
+  <!-- Bannière -->
+  <section class="banniere">
+    <img src="banniere.png" alt="Contact Kayako Studio">
+    <div class="banniere-texte">Contact</div>
   </section>
+
+  <!-- Contenu -->
+  <main class="content" style="text-align: center; padding: 60px 20px;">
+    <h2 style="font-family: 'Playfair Display'; margin-bottom: 20px;">Entrer en contact</h2>
+    <p style="max-width: 600px; margin: 0 auto 40px;">
+      Pour tout projet, question ou collaboration, n'hésitez pas à m'écrire.  
+      Je répondrai avec plaisir dans les plus brefs délais.
+    </p>
+
+    <p><strong>Email :</strong> <a href="mailto:kayakostudio@gmail.com">kayakostudio@gmail.com</a></p>
+    <p><strong>Instagram :</strong> <a href="https://www.instagram.com/kayakostudio" target="_blank">@kayakostudio</a></p>
+  </main>
 
   <footer>
     &copy; 2025 Kayako Studio – Tous droits réservés.
