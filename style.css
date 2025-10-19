@@ -110,13 +110,13 @@ nav {
 
 .banniere {
   position: relative;
-  width: 100%;
+  width: 150%;
   height: 120px;
   overflow: hidden;
 }
 
 .banniere img {
-  width: 100%;
+  width: 120%;
   height: 100%;
   object-fit: cover;
   display: block;
