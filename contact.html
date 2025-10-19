@@ -58,31 +58,32 @@
 </head>
 <body>
 
-  <header>
-    <h1>Contact</h1>
-  </header>
+  <header class="topbar">
+    <div class="menu-gauche">
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html">Accueil</a></li>
+          <li class="dropdown">
+            <a href="portfolio.html">Portfolio ▾</a>
+            <ul class="submenu">
+              <li><a href="videos-interviews.html">Vidéos Interviews</a></li>
+              <li><a href="videos-commerciales.html">Vidéos Commerciales</a></li>
+              <li><a href="videos-evenementielles.html">Vidéos Événementielles</a></li>
+              <li><a href="videos-particuliers.html">Vidéos Particuliers</a></li>
+              <li><a href="photos-portraits.html">Photos Portraits</a></li>
+              <li><a href="photos-evenementielles.html">Photos Événementielles</a></li>
+              <li><a href="photos-commerciales.html">Photos Commerciales</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
 
-  <nav>
-  <div class="menu-toggle" onclick="toggleMenu()">
-    <span></span>
-  </div>
-  <ul class="menu">
-    <li><a href="index.html">Accueil</a></li>
-    <li class="dropdown">
-      <a href="portfolio.html">Portfolio ▾</a>
-      <ul class="submenu">
-        <li><a href="videos-interviews.html">Vidéos Interviews</a></li>
-        <li><a href="videos-commerciales.html">Vidéos Commerciales</a></li>
-        <li><a href="videos-evenementielles.html">Vidéos Événementielles</a></li>
-        <li><a href="videos-particuliers.html">Vidéos Particuliers</a></li>
-        <li><a href="photos-portraits.html">Photos Portraits</a></li>
-        <li><a href="photos-evenementielles.html">Photos Événementielles</a></li>
-        <li><a href="photos-commerciales.html">Photos Commerciales</a></li>
-      </ul>
-    </li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+    <div class="logo-centre">
+      <img src="logo.png" alt="Kayako Studio" class="logo">
+    </div>
+  </header>
 
 <script>
   function toggleMenu() {
