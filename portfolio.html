@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio – Kayako Studio</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      background: #fff;
+      color: #222;
+    }
+
+    header, nav, footer {
+      background: #000;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .portfolio {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .gallery img, iframe {
+      width: 300px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    footer {
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Mon Portfolio</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <section class="portfolio">
+    <h2>Photos</h2>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/300x180.png?text=Photo+1" alt="Photo 1">
+      <img src="https://via.placeholder.com/300x180.png?text=Photo+2" alt="Photo 2">
+      <img src="https://via.placeholder.com/300x180.png?text=Photo+3" alt="Photo 3">
+    </div>
+
+    <h2 style="margin-top: 40px;">Vidéos</h2>
+    <div class="gallery">
+      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Kayako Studio – Tous droits réservés.
+  </footer>
+
+</body>
+</html>
