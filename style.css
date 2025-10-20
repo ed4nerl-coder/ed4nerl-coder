@@ -115,7 +115,7 @@ h1, h2 {
 }
 
 .logo img {
-  height: 90px; /* ✅ taille raisonnable */
+  height: 120px; /* ✅ taille raisonnable */
   width: auto;
   display: block;
 }
