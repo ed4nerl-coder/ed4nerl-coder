@@ -438,4 +438,16 @@ footer {
   user-select: none;
 }
 
-  
+/* Au départ, caché et décalé vers le bas */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Quand visible */
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
