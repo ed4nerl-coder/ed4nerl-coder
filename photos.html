@@ -2,36 +2,46 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Photos - Kayako Studio</title>
+  <title>Photos</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-    <h1>Photos</h1>
+  <header class="topbar">
+    <!-- Ton header habituel ici -->
   </header>
 
-  <nav>
-    <ul class="menu">
-      <li><a href="index.html">Accueil</a></li>
-      <li class="dropdown">
-        <a href="portfolio.html">Portfolio ▾</a>
-        <ul class="submenu">
-          <li><a href="videos.html">Vidéos</a></li>
-          <li><a href="photos.html">Photos</a></li>
-        </ul>
-      </li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+  <main class="galerie-photos">
+    <h1 class="page-title">Photos</h1>
 
-  <main style="padding: 40px; text-align: center;">
-    <p>Cette page contiendra toutes mes Photos</p>
+    <section class="categorie">
+      <h2>Portraits</h2>
+      <div class="grille">
+        <img src="photos/portrait1.jpg" alt="Portrait 1">
+        <img src="photos/portrait2.jpg" alt="Portrait 2">
+        <img src="photos/portrait3.jpg" alt="Portrait 3">
+      </div>
+    </section>
+
+    <section class="categorie">
+      <h2>Commerciales</h2>
+      <div class="grille">
+        <img src="photos/commerciale1.jpg" alt="Commerciale 1">
+        <img src="photos/commerciale2.jpg" alt="Commerciale 2">
+        <img src="photos/commerciale3.jpg" alt="Commerciale 3">
+      </div>
+    </section>
+
+    <section class="categorie">
+      <h2>Événementielles</h2>
+      <div class="grille">
+        <img src="photos/evenement1.jpg" alt="Événementiel 1">
+        <img src="photos/evenement2.jpg" alt="Événementiel 2">
+        <img src="photos/evenement3.jpg" alt="Événementiel 3">
+      </div>
+    </section>
   </main>
-
-  <footer>
-    &copy; 2025 Kayako Studio – Tous droits réservés.
-  </footer>
 
 </body>
 </html>
+
