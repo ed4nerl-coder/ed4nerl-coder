@@ -17,6 +17,7 @@ h1, h2 {
   margin-bottom: 20px;
 }
 
+/* Barre du haut */
 .top-bar {
   background-color: #ffffff;
   padding: 20px 40px;
@@ -26,22 +27,28 @@ h1, h2 {
   z-index: 10;
 }
 
-.logo-centre {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
 .logo {
   height: 200px; /* ✅ plus grand */
   width: auto;
 }
 
+/* Logo centré */
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.logo img {
+  height: 50px; /* Ajuste ici pour ne pas qu’il prenne trop de place */
+  object-fit: contain;
+}
+
 /* Menu */
 .menu {
-  list-style: none;
   display: flex;
-  gap: 25px;
+  list-style: none;
+  gap: 30px;
   margin: 0;
   padding: 0;
 }
@@ -63,6 +70,7 @@ h1, h2 {
   color: #1e1e1e;
   text-decoration: none;
 }
+
 
 .submenu {
   position: absolute;
@@ -493,7 +501,6 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
   position: relative;
 }
 
@@ -508,4 +515,40 @@ footer {
 
 .nav-right {
   margin-left: auto;
+}
+
+/* Sous-menu Portfolio */
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  display: none;
+  list-style: none;
+  padding: 10px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  z-index: 100;
+}
+
+.menu li:hover .submenu {
+  display: block;
+}
+
+.submenu li {
+  padding: 5px 20px;
+  white-space: nowrap;
+}
+
+/* Contact à droite */
+.contact a {
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 10px 20px;
+  color: #1e1e1e;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact a:hover {
+  color: #555;
 }
