@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <title>Photos</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Lightbox CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
 </head>
 <body>
 
@@ -15,34 +17,55 @@
     <h1 class="page-title">Photos</h1>
 
     <section class="categorie">
-      <h2>Portraits</h2>
-      <div class="grille">
-        <img src="photos/portrait1.jpg" alt="Portrait 1">
-        <img src="photos/portrait2.jpg" alt="Portrait 2">
-        <img src="photos/portrait3.jpg" alt="Portrait 3">
-        <img src="photos/portrait4.jpg" alt="Portrait 4">
-      </div>
-    </section>
+  <h2>Portraits</h2>
+  <div class="grille">
+    <a href="photos/portrait1.jpg" data-lightbox="portraits">
+      <img src="photos/portrait1.jpg" alt="Portrait 1">
+    </a>
+    <a href="photos/portrait2.jpg" data-lightbox="portraits">
+      <img src="photos/portrait2.jpg" alt="Portrait 2">
+    </a>
+    <a href="photos/portrait3.jpg" data-lightbox="portraits">
+      <img src="photos/portrait3.jpg" alt="Portrait 3">
+    </a>
+  </div>
+</section>
+
 
     <section class="categorie">
-      <h2>Commerciales</h2>
-      <div class="grille">
-        <img src="photos/commerciale1.jpg" alt="Commerciale 1">
-        <img src="photos/commerciale2.jpg" alt="Commerciale 2">
-        <img src="photos/commerciale3.jpg" alt="Commerciale 3">
-      </div>
-    </section>
+  <h2>Commerciales</h2>
+  <div class="grille">
+    <a href="photos/commerciale1.jpg" data-lightbox="commerciales">
+      <img src="photos/commerciale1.jpg" alt="Commerciale 1">
+    </a>
+    <a href="photos/commerciale2.jpg" data-lightbox="commerciales">
+      <img src="photos/commerciale2.jpg" alt="Commerciale 2">
+    </a>
+    <a href="photos/commerciale3.jpg" data-lightbox="commerciales">
+      <img src="photos/commerciale3.jpg" alt="Commerciale 3">
+    </a>
+  </div>
+</section>
+
 
     <section class="categorie">
-      <h2>Événementielles</h2>
-      <div class="grille">
-        <img src="photos/evenement1.jpg" alt="Événementiel 1">
-        <img src="photos/evenement2.jpg" alt="Événementiel 2">
-        <img src="photos/evenement3.jpg" alt="Événementiel 3">
-      </div>
-    </section>
+  <h2>Evénementielles</h2>
+  <div class="grille">
+    <a href="photos/evenementielle1.jpg" data-lightbox="evenementielles">
+      <img src="photos/evenementielle1.jpg" alt="Evénementielle 1">
+    </a>
+    <a href="photos/evenementielle2.jpg" data-lightbox="evenementielles">
+      <img src="photos/evenementielle2.jpg" alt="Evénementielle 2">
+    </a>
+    <a href="photos/evenementielle3.jpg" data-lightbox="evenementielles">
+      <img src="photos/evenementielle3.jpg" alt="Evénementielle 3">
+    </a>
+  </div>
+</section>
+
   </main>
-
+<!-- Lightbox JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
 </body>
 </html>
 
