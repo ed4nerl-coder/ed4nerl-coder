@@ -94,33 +94,20 @@ h1, h2 {
   display: block;
 }
 
-/* Dégradé de transparence de gauche à droite */
-.banniere::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
-  pointer-events: none;
+.banner {
+  height: 150px;
+  background: linear-gradient(to right, rgba(0,0,0,0.4), rgba(255,255,255,0.2)), url('banniere.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Texte sur la bannière */
-.banniere-texte {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  font-size: 24px;
-  font-family: 'Playfair Display', serif;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-align: center;
-  max-width: 90%;
+.banner-text {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
-
 
 /* ===== SECTION INTRO ===== */
 .intro {
