@@ -73,8 +73,7 @@
 
   </main>
 <!-- Lightbox JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
-  <script>
+<script>
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightbox-img');
   const closeBtn = document.querySelector('.close-btn');
@@ -106,13 +105,13 @@
     lightboxImg.src = images[currentIndex].src;
   });
 
-  // Fermer la lightbox en cliquant en dehors de l'image
   lightbox.addEventListener('click', (e) => {
     if (e.target === lightbox) {
       lightbox.style.display = 'none';
     }
   });
 </script>
+
 </body>
 </html>
 
