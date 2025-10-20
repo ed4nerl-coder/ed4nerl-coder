@@ -135,24 +135,34 @@ h1, h2 {
   color: #555;
 }
 
-/* =========================
-   BANNIÈRE
-========================= */
-.banner {
-  height: 150px;
-  background: linear-gradient(to right, rgba(0,0,0,0.4), rgba(255,255,255,0.2)), url('banniere.jpg') center/cover no-repeat;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+/* ===== BANNIÈRE FINE ET TEXTE SUPERPOSÉ ===== */
+.banniere {
+  position: relative;
+  width: 100%;
+  height: 150px; /* ✅ bannière plus fine */
+  overflow: hidden;
+  margin-bottom: 40px;
 }
 
-.banner-text {
+.banniere img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.6); /* ✅ assombrit un peu pour lisibilité du texte */
+}
+
+.banniere-texte {
+  position: absolute;
+  top: 50%;
+  left: 60px;
+  transform: translateY(-50%);
   color: white;
-  font-size: 1.8rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
   font-weight: 600;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-  margin-left: 60px;
   text-transform: uppercase;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
 }
 
 /* =========================
