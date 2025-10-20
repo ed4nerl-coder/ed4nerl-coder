@@ -2,24 +2,37 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Photos</title>
   <link rel="stylesheet" href="style.css">
-  <!-- Lightbox CSS -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 </head>
-  <div id="lightbox" class="custom-lightbox">
-  <span class="close-btn">&times;</span>
-  <img id="lightbox-img" src="" alt="">
-  <div class="nav-buttons">
-    <span id="prev">&#10094;</span>
-    <span id="next">&#10095;</span>
-  </div>
-</div>
+
 <body>
 
+  <!-- ===== BARRE DE NAVIGATION ===== -->
   <header class="topbar">
-    <!-- Ton header habituel ici -->
-  </header>
+  <div class="menu-gauche">
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Accueil</a></li>
+        <li class="dropdown">
+          <a href="#">Portfolio ▾</a>
+          <ul class="submenu">
+            <li><a href="videos.html">Vidéos</a></li>
+            <li><a href="photos.html">Photos</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+        
+    <div class="logo-centre">
+    <img src="logo.png" alt="Logo Kayako Studio" class="logo">
+  </div>
+</header>
 
   <main class="galerie-photos">
     <h1 class="page-title">Photos</h1>
