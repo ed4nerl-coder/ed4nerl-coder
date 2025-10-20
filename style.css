@@ -19,11 +19,13 @@ h1, h2 {
 
 .top-bar {
   background-color: #ffffff;
-  padding: 20px 40px;
+  padding: 30px 60px; /* ⬅️ augmente l’espace intérieur */
   border-bottom: 1px solid #e5e5e5;
   position: sticky;
   top: 0;
   z-index: 10;
+}
+
 }
 
 .logo-centre {
