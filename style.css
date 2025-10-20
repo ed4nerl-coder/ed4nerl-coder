@@ -389,3 +389,47 @@ footer {
   font-weight: 500;
 }
 
+.page-title {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.categorie {
+  margin: 60px auto;
+  padding: 0 40px;
+  max-width: 1200px;
+}
+
+.categorie h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.grille {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 0; /* ⬅️ plus de séparation entre les images */
+}
+
+
+.grille img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0; /* ⬅️ supprime les arrondis si tu veux un effet collage propre */
+  box-shadow: none; /* ⬅️ supprime les ombres si tu veux un style épuré collé */
+  display: block;
+}
+
+
+.grille img:hover {
+  transform: scale(1.03);
+}
+
+
