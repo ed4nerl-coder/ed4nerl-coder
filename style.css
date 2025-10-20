@@ -33,7 +33,7 @@ h1, h2 {
 }
 
 .logo {
-  height: 300px; /* ✅ plus grand */
+  height: 200px; /* ✅ plus grand */
   width: auto;
 }
 
