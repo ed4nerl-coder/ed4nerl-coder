@@ -47,8 +47,8 @@
 
   <!-- ===== PRÉSENTATION ===== -->
   <section class="intro">
-    <img src="photo-accueil.png" alt="Photo de Léandre" class="photo-accueil">
-    <div class="intro-text">
+  <img src="photo-accueil.png" alt="Photo de Léandre" class="photo-accueil animate-on-scroll">
+  <div class="intro-text animate-on-scroll">
       <h2>À propos de Kayako Studio</h2>
       <p>
         Kayako Studio est l'entreprise de production vidéo et photo fondée par Léandre Lacarbonara en janvier 2025.<br><br>
@@ -63,6 +63,29 @@
   <footer>
     &copy; 2025 Kayako Studio – Tous droits réservés.
   </footer>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1 // déclenche quand 10% de l'élément est visible
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else {
+          entry.target.classList.remove('visible');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+      observer.observe(el);
+    });
+  });
+</script>
 
 </body>
 </html>
