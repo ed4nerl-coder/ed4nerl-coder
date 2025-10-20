@@ -18,16 +18,14 @@ h1, h2 {
   margin-bottom: 20px;
 }
 
-/* =========================
-   HEADER & NAVIGATION
-========================= */
+/* ===== HEADER / NAVIGATION ===== */
 .top-bar {
   background-color: #ffffff;
   padding: 20px 40px;
   border-bottom: 1px solid #e5e5e5;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 100;
 }
 
 .nav {
@@ -42,10 +40,10 @@ h1, h2 {
   display: flex;
   list-style: none;
   gap: 30px;
-  padding: 0;
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  padding: 0;
 }
+
 
 .menu li {
   position: relative;
@@ -106,17 +104,22 @@ h1, h2 {
   color: #666;
 }
 
-/* Logo centré */
+/* Logo centré dans la barre */
 .logo {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
 }
 
 .logo img {
-  height: 50px;
-  object-fit: contain;
+  height: 50px; /* ✅ taille raisonnable */
+  width: auto;
+  display: block;
 }
+
 
 /* Contact à droite */
 .contact a {
