@@ -1,9 +1,10 @@
-/* Reset basique */
+/* =========================
+   RESET GÉNÉRAL
+========================= */
 * {
   box-sizing: border-box;
 }
 
-/* ===== POLICES & GÉNÉRAL ===== */
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
@@ -17,7 +18,9 @@ h1, h2 {
   margin-bottom: 20px;
 }
 
-/* Barre du haut */
+/* =========================
+   HEADER & NAVIGATION
+========================= */
 .top-bar {
   background-color: #ffffff;
   padding: 20px 40px;
@@ -27,30 +30,21 @@ h1, h2 {
   z-index: 10;
 }
 
-.logo {
-  height: 200px; /* ✅ plus grand */
-  width: auto;
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
 }
 
-/* Logo centré */
-.logo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.logo img {
-  height: 50px; /* Ajuste ici pour ne pas qu’il prenne trop de place */
-  object-fit: contain;
-}
-
-/* Menu */
+/* Menu à gauche */
 .menu {
   display: flex;
   list-style: none;
   gap: 30px;
-  margin: 0;
   padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 .menu li {
@@ -61,58 +55,91 @@ h1, h2 {
   text-decoration: none;
   color: #333;
   font-weight: 400;
+  transition: color 0.3s ease;
 }
 
 .menu li a {
   font-weight: 500;
   font-size: 1rem;
   padding: 10px;
-  color: #1e1e1e;
-  text-decoration: none;
 }
 
+.menu a:hover {
+  color: #888;
+}
 
+/* Sous-menu Portfolio */
 .submenu {
   position: absolute;
   top: 100%;
   left: 0;
   background-color: #fff;
-  display: none;
   list-style: none;
   padding: 10px 0;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  z-index: 100;
+  margin: 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
 }
 
 .menu li:hover .submenu {
-  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .submenu li {
-  padding: 5px 20px;
+  padding: 8px 20px;
   white-space: nowrap;
 }
 
-/* ===== BANNIÈRE ===== */
-.banniere {
-  position: relative;
-  width: 100%;
-  height: 400px; /* ou la hauteur que tu veux */
-  overflow: hidden;
+.submenu li a {
+  color: #333;
 }
 
-.banniere img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+.submenu li a:hover {
+  color: #666;
 }
 
+/* Logo centré */
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.logo img {
+  height: 50px;
+  object-fit: contain;
+}
+
+/* Contact à droite */
+.contact a {
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 10px 20px;
+  color: #1e1e1e;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact a:hover {
+  color: #555;
+}
+
+/* =========================
+   BANNIÈRE
+========================= */
 .banner {
   height: 150px;
   background: linear-gradient(to right, rgba(0,0,0,0.4), rgba(255,255,255,0.2)), url('banniere.jpg') center/cover no-repeat;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -121,12 +148,13 @@ h1, h2 {
   font-size: 1.8rem;
   font-weight: 600;
   text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-  align-self: flex-start;         /* aligne à gauche */
-  margin-left: 60px;              /* espace depuis le bord gauche */
-  text-transform: uppercase;      /* met en majuscules */
+  margin-left: 60px;
+  text-transform: uppercase;
 }
 
-/* ===== SECTION INTRO ===== */
+/* =========================
+   PAGE ACCUEIL
+========================= */
 .intro {
   display: flex;
   flex-wrap: wrap;
@@ -148,42 +176,140 @@ h1, h2 {
   font-weight: 300;
   line-height: 1.6;
   font-size: 16px;
-  font-family: 'Roboto', sans-serif;
+  text-align: justify;
 }
 
-/* ===== FOOTER ===== */
-footer {
+/* Présentation animée */
+.presentation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 40px;
+  gap: 60px;
+  background-color: #fff;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+
+.photo-container {
+  flex: 1;
+  max-width: 500px;
+  animation: slideInLeft 1.2s ease forwards;
+  opacity: 0;
+}
+
+.photo-container img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.texte-container {
+  flex: 1;
+  animation: slideInRight 1.2s ease forwards;
+  opacity: 0;
+  font-size: 16px;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+/* =========================
+   PAGES VIDÉOS / PHOTOS
+========================= */
+.video-title,
+.photo-title,
+.page-title {
   text-align: center;
-  padding: 30px 0;
-  font-size: 14px;
-  color: #888;
+  margin: 60px auto 40px;
+  font-size: 32px;
+  font-family: 'Playfair Display', serif;
+  color: #333;
+  font-weight: 500;
 }
 
-@media (max-width: 900px) {
-  .intro {
-    flex-direction: column;
-    margin-top: 60px;
-  }
-  
-  .photo-accueil {
-    width: 80%;
-    margin-bottom: 30px;
-  }
-
-  .logo-container {
-    position: static;
-    transform: none;
-    margin: 0 auto;
-    pointer-events: auto;
-  }
-
-  .header-top {
-    justify-content: flex-start;
-    padding: 20px;
-  }
+.categorie {
+  margin: 60px auto;
+  padding: 0 40px;
+  max-width: 1200px;
 }
 
-/* ===== CONTACT PAGE ===== */
+.categorie h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.grille {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 0;
+}
+
+.grille img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  box-shadow: none;
+  display: block;
+}
+
+.grille img:hover {
+  transform: scale(1.03);
+}
+
+/* Lightbox */
+.custom-lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  flex-direction: column;
+}
+
+.custom-lightbox img {
+  max-width: 70vw;
+  max-height: 80vh;
+  border-radius: 10px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.nav-buttons {
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+}
+
+.nav-buttons span {
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* =========================
+   PAGE CONTACT
+========================= */
 .contact-page {
   text-align: center;
   padding: 80px 20px;
@@ -233,322 +359,15 @@ footer {
   color: #999;
 }
 
-.contact-link {
-  font-weight: 500;
-  font-size: 1rem;
-  padding: 10px 20px;
-  color: #1e1e1e;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.contact-link:hover {
-  color: #555;
-}
-
-/* ===== Animations ===== */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ==== MENU DÉROULANT ==== */
-
-.menu {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-  padding: 0;
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-}
-
-.menu li {
-  position: relative;
-}
-
-.menu a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 400;
-  transition: color 0.3s ease;
-}
-
-.menu a:hover {
+/* =========================
+   FOOTER
+========================= */
+footer {
+  text-align: center;
+  padding: 30px 0;
+  font-size: 14px;
   color: #888;
 }
 
-/* Sous-menu */
-.submenu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  list-style: none;
-  padding: 10px 0;
-  margin: 0;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(10px);
-  transition: all 0.3s ease;
-  z-index: 1000;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-.dropdown:hover .submenu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-.submenu li {
-  padding: 8px 20px;
-  white-space: nowrap;
-}
-
-.submenu li a {
-  color: #333;
-}
-
-.submenu li a:hover {
-  color: #666;
-}
-
-/* SECTION PRÉSENTATION */
-.presentation {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 80px 40px;
-  gap: 60px;
-  background-color: #fff;
-  overflow: hidden;
-  flex-wrap: wrap;
-}
-
-/* Animation pour la photo */
-.photo-container {
-  flex: 1;
-  max-width: 500px;
-  animation: slideInLeft 1.2s ease forwards;
-  opacity: 0;
-}
-
-.photo-container img {
-  width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-/* Animation pour le texte */
-.texte-container {
-  flex: 1;
-  animation: slideInRight 1.2s ease forwards;
-  opacity: 0;
-  font-family: 'Roboto', sans-serif;
-  color: #333;
-  font-size: 16px;
-  line-height: 1.7;
-  text-align: justify;
-}
-
-/* Animations */
-@keyframes slideInLeft {
-  from {
-    transform: translateX(-100px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideInRight {
-  from {
-    transform: translateX(100px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-.video-title {
-  text-align: center;
-  margin: 60px auto 40px;
-  font-size: 32px;
-  font-family: 'Playfair Display', serif;
-  color: #333;
-  font-weight: 500;
-}
-
-.photo-title {
-  text-align: center;
-  margin: 60px auto 40px;
-  font-size: 32px;
-  font-family: 'Playfair Display', serif;
-  color: #333;
-  font-weight: 500;
-}
-
-.page-title {
-  text-align: center;
-  font-family: 'Playfair Display', serif;
-  font-size: 32px;
-  margin-top: 60px;
-  margin-bottom: 40px;
-  color: #333;
-}
-
-.categorie {
-  margin: 60px auto;
-  padding: 0 40px;
-  max-width: 1200px;
-}
-
-.categorie h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 24px;
-  margin-bottom: 20px;
-  color: #444;
-}
-
-.grille {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 0; /* ⬅️ plus de séparation entre les images */
-}
-
-
-.grille img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 0; /* ⬅️ supprime les arrondis si tu veux un effet collage propre */
-  box-shadow: none; /* ⬅️ supprime les ombres si tu veux un style épuré collé */
-  display: block;
-}
-
-
-.grille img:hover {
-  transform: scale(1.03);
-}
-
-/* Lightbox personnalisée */
-.custom-lightbox {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(8px);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  flex-direction: column;
-}
-
-.custom-lightbox img {
-  max-width: 70vw;
-  max-height: 80vh;
-  border-radius: 10px;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
-}
-
-.close-btn {
-  position: absolute;
-  top: 30px;
-  left: 30px;
-  font-size: 30px;
-  color: white;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.nav-buttons {
-  position: absolute;
-  bottom: 50px;
-  display: flex;
-  justify-content: space-between;
-  width: 150px;
-}
-
-.nav-buttons span {
-  font-size: 40px;
-  color: white;
-  cursor: pointer;
-  user-select: none;
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-}
-
-/* Menu à gauche */
-.nav-left .menu {
-  display: flex;
-  list-style: none;
-  gap: 30px;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-right {
-  margin-left: auto;
-}
-
-/* Sous-menu Portfolio */
-.submenu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #fff;
-  display: none;
-  list-style: none;
-  padding: 10px 0;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  z-index: 100;
-}
-
-.menu li:hover .submenu {
-  display: block;
-}
-
-.submenu li {
-  padding: 5px 20px;
-  white-space: nowrap;
-}
-
-/* Contact à droite */
-.contact a {
-  font-weight: 500;
-  font-size: 1rem;
-  padding: 10px 20px;
-  color: #1e1e1e;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.contact a:hover {
-  color: #555;
-}
+/* =========================
+  
