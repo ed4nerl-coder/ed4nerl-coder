@@ -272,6 +272,29 @@ h1, h2 {
   transform: scale(1.03);
 }
 
+.video-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px;
+}
+
+.video-container {
+  width: 320px;
+  height: 568px; /* Format vertical pour TikTok/Instagram Reels */
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
 /* Lightbox */
 .custom-lightbox {
   position: fixed;
