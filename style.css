@@ -632,3 +632,26 @@ footer {
   z-index: 10000;
 }
 
+@media (max-width: 900px) {
+  .top-bar nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .menu {
+    order: 2; /* le menu passe après le logo */
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .logo {
+    order: 1;
+    margin: 0 auto;
+  }
+
+  .contact {
+    order: 3;
+    margin-top: 10px;
+  }
+}
