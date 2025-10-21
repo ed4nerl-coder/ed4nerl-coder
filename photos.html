@@ -85,23 +85,22 @@
   
 <!-- Lightbox JS -->
 <script>
+  const images = document.querySelectorAll('.lightbox-trigger');
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightbox-img');
-  const closeBtn = document.querySelector('.close-btn');
-  const nextBtn = document.getElementById('next');
-  const prevBtn = document.getElementById('prev');
 
-  const images = document.querySelectorAll('.grille img');
-  let currentIndex = 0;
-
-  images.forEach((img, index) => {
+  images.forEach(img => {
     img.addEventListener('click', () => {
-      lightbox.style.display = 'flex';
       lightboxImg.src = img.src;
-      currentIndex = index;
+      lightbox.style.display = 'flex';
     });
   });
 
+  function closeLightbox() {
+    lightbox.style.display = 'none';
+    lightboxImg.src = '';
+  }
+  
   closeBtn.addEventListener('click', () => {
     lightbox.style.display = 'none';
   });
