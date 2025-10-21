@@ -121,10 +121,10 @@
     }
   });
 </script>
-<div class="custom-lightbox" id="lightbox">
-  <span class="close-btn" onclick="closeLightbox()">×</span>
-  <img id="lightbox-img" src="" alt="">
-  <div class="nav-buttons">
+<div id="lightbox" class="custom-lightbox" style="display:none;">
+  <span id="close-btn" class="close-btn">&times;</span>
+  <img id="lightbox-img" src="" alt="Photo agrandie">
+</div>
     <span onclick="prevImage()">‹</span>
     <span onclick="nextImage()">›</span>
   </div>
