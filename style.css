@@ -115,10 +115,11 @@ h1, h2 {
 }
 
 .logo img {
-  height: 180px;
+  height: 50px;
   width: auto;
-  display: block;
+  object-fit: contain;
 }
+
 
 
 /* Contact à droite */
@@ -632,26 +633,28 @@ footer {
   z-index: 10000;
 }
 
-@media (max-width: 900px) {
-  .top-bar nav {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .menu {
-    order: 2; /* le menu passe après le logo */
-    width: 100%;
-    justify-content: center;
-    margin-top: 10px;
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
 
   .logo {
-    order: 1;
-    margin: 0 auto;
+    position: static;
+    transform: none;
+    order: -1;
+    margin-bottom: 10px;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
 
   .contact {
-    order: 3;
+    order: 1;
     margin-top: 10px;
   }
 }
