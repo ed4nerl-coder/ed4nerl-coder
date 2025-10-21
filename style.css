@@ -451,3 +451,105 @@ footer {
   transform: translateY(0);
 }
 
+/* ========== ANIMATIONS GÉNÉRALES ========== */
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Apparition slide droite */
+.slide-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 1s ease;
+}
+.slide-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Apparition slide gauche */
+.slide-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 1s ease;
+}
+.slide-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Apparition fondu */
+.fade-in {
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+}
+
+/* Effet de hover sur images */
+.grille img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.8;
+}
+
+/* Apparition texte bannière */
+.banniere-texte {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all 1s ease-in-out;
+}
+.banniere.visible .banniere-texte {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ========== PAGE CONTACT ========== */
+
+.contact-page {
+  animation: fadeIn 1.2s ease;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* Slide contact titre */
+.contact-title {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: slideDown 1s ease forwards;
+}
+
+@keyframes slideDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========== HEADER STICKY ENTRÉE ========== */
+
+.top-bar {
+  animation: slideTop 0.8s ease forwards;
+}
+
+@keyframes slideTop {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
