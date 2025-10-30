@@ -311,6 +311,12 @@ h1, h2 {
   display: block;
 }
 
+.grille img {
+  width: 100%;
+  height: 300px; /* par exemple */
+  object-fit: cover;
+}
+
 /* Lightbox */
 .custom-lightbox {
   position: fixed;
