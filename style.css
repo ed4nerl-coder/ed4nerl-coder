@@ -256,22 +256,23 @@ h1, h2 {
 /* ====== GALERIE PHOTOS ====== */
 .grille {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* colonnes flexibles */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* plusieurs colonnes adaptatives */
   gap: 10px;
+  justify-content: center;
+  max-width: 1200px;   /* limite la largeur totale */
+  margin: 0 auto;      /* centre la grille sur la page */
 }
 
-/* Images avec taille uniforme */
 .grille img {
   width: 100%;
-  height: 300px; /* hauteur fixe */
-  object-fit: cover; /* recadre proprement sans déformer */
+  height: 250px;        /* taille fixe raisonnable */
+  object-fit: cover;    /* recadrage sans déformation */
+  display: block;
   border-radius: 0;
   box-shadow: none;
-  display: block;
   transition: transform 0.3s ease;
 }
 
-/* Effet au survol */
 .grille img:hover {
   transform: scale(1.03);
 }
